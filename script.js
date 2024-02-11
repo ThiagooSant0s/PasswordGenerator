@@ -30,5 +30,28 @@ function generatePassword(){
     
     }  
 
+    function copyPassword(){
+        var passwordElement = document.getElementById('password');
+        var passwordText = passwordElement.textContent || passwordElement.innerText;
+
+        if (!navigator.clipboard){
+            alert('Seu navegador não suporta a funcionalidade de copiar para área de transferência.Você pode selecionar a senha manualmente e copiá-la');
+            return;
+
+        }  
+
+        navigator.clipboard.writeText(passwordText).then(function(){
+            alert('Senha copiada para a área de tranferência!');
+
+        }, function(err){
+            console.error('Erro ao copiar a senha:' , err);
+        }); 
+        
+
+    }  
+
+
+
+
     
     
