@@ -1,36 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name = "keywords" content = "Password Genarator">
+    <meta name="keywords" content="Password Generator">
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="icon" href="assets/iconesenha.ico">
 </head>
 <body>
 
-    <img class = "logo" src="assets/logo.png" alt="Password Genarator logo">
+    <img class="logo" src="assets/logo.png" alt="Password Generator logo">
 
     <main class="container-input">
-        <span> Tamanho <span id = "valor"> </span> caracteres </span>
-        <input id = "slider" class="slider" type="range" min="8" max="25" value="8">
-        
-
+        <span> Tamanho <span id="valor">8</span> caracteres </span>
+        <input id="slider" class="slider" type="range" min="8" max="45" value="8">
         <button id="button" class="button-cta" onclick="generatePassword()"> Gerar senha </button>
     </main>
     
-    <div id="container-password" onclick="copyPassword()" class="container-password hide">
+    <div id="container-password" class="container-password hide">
         <span class="title"> Sua senha gerada foi:</span>
         <span id="password" class="password"></span>
-        
-        
+        <button id="copyButton" onclick="copyPassword()" class="button-cta hide">Copiar Senha</button>
     </div>
-
-    <button id="copyButton" onclick="copyPassword()" class="button-cta hide">Copiar Senha</button>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
